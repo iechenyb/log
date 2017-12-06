@@ -1,5 +1,6 @@
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
 
 /**
  * 作者 : iechenyb<br>
@@ -9,9 +10,12 @@ import org.slf4j.LoggerFactory;
 public class Main {
 	private final static Logger logger = LoggerFactory.getLogger(Main.class);
 	public static void main(String[] args) {
-		logger.warn("logback 成功了");
-		logger.info("logback 成功了");
+		MDC.put("reaIp", "123.123.123.123");
+		for(int i=0;i<1;i++)
+		logger.warn("logback 成功了00000[]"+i+(1));
+		/*logger.info("logback 成功了");
 		logger.error("logback 成功了");
-		logger.debug("logback 成功了");
+		logger.debug("logback 成功了");*/
+		
 	}
 }
